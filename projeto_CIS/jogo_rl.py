@@ -38,11 +38,11 @@ trap_set_three = [
 print("Insira o nível de dificuldade: simples, medio, complexo \n")
 ans_challange_lvl = input()
 match(ans_challange_lvl):
-    case "simples":
+    case "complexo":
         armadilhas = trap_set_one
     case "medio":
         armadilhas = trap_set_two
-    case "complexo":
+    case "facil":
         armadilhas = trap_set_three
 
 # Inicializa Q-table

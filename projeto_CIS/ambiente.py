@@ -9,7 +9,7 @@ class Ambiente:
         self.armadilhas = [(3, 3), (4, 4), (5, 5)]
         self.reset()
     def definir_armadilhas(self,cenario:str):
-        if (cenario == "simples"):
+        if (cenario == "complexo"):
             self.armadilhas = [(3, 3), (4, 4), (5, 5), (6, 6)]
         elif (cenario == "medio"):
             self.armadilhas = [
@@ -17,7 +17,7 @@ class Ambiente:
                 (4, 5), (5, 5), (6, 5),
                 (7, 2), (7, 3),
             ]
-        elif(cenario == "complexo"):
+        elif(cenario == "facil"):
             self.armadilhas = [
                 (0, 4), (1, 4), (2, 4), (3, 4), (4, 4), (5, 4), (6, 4),
                 (0, 3), (1, 3), (2, 3), (3, 3), (5, 3), (6, 3),
