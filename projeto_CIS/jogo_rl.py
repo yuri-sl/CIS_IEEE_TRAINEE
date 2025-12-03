@@ -22,6 +22,29 @@ armadilhas = [(3, 3), (4, 4), (5, 5)]
 objetivo = (9, 9)
 estado_inicial = (0, 0)
 
+trap_set_one = [(3, 3), (4, 4), (5, 5), (6, 6)]
+trap_set_two = [
+        (2, 2), (2, 3), (2, 4),
+        (4, 5), (5, 5), (6, 5),
+        (7, 2), (7, 3),
+    ]
+trap_set_three = [
+        (0, 4), (2, 4), (3, 4), (4, 4), (5, 4), (6, 4),
+        (0, 3), (2, 3), (3, 3), (5, 3),
+        (0, 2), (1, 2), (7, 2), (8, 2),
+        (0, 1), (1, 1), (3, 1), (5, 1), (6, 1), (7, 1),
+        (3, 0), (4, 0), (5, 0),(8,3),(8,4)
+    ]
+print("Insira o nível de dificuldade: simples, medio, complexo \n")
+ans_challange_lvl = input()
+match(ans_challange_lvl):
+    case "simples":
+        armadilhas = trap_set_one
+    case "medio":
+        armadilhas = trap_set_two
+    case "complexo":
+        armadilhas = trap_set_three
+
 # Inicializa Q-table
 q_table = np.zeros((TAMANHO_GRID, TAMANHO_GRID, 4))  # 4 ações: cima, baixo, esquerda, direita
 
