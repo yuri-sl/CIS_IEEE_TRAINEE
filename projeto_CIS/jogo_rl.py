@@ -42,7 +42,7 @@ match(ans_challange_lvl):
         armadilhas = trap_set_one
     case "medio":
         armadilhas = trap_set_two
-    case "facil":
+    case "simples":
         armadilhas = trap_set_three
 
 # Inicializa Q-table
@@ -96,6 +96,7 @@ for episodio in range(episodios):
         novo_estado = mover(estado, acao)
         recompensa, terminal = calcular_recompensa(novo_estado)
 
+        #Q-Table calculo
         x, y = estado
         nx, ny = novo_estado
         q_atual = q_table[x, y, acao]
